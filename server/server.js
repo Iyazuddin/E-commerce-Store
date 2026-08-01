@@ -17,8 +17,7 @@ app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/orders", orderRoutes);
 
-const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/electromart";
-console.log("MONGO_URI:", MONGO_URI);
+const MONGO_URI = process.env.MONGO_URI;
 
 mongoose
   .connect(MONGO_URI)
