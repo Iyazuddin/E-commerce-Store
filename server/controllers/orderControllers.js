@@ -1,12 +1,10 @@
 const Order = require("../models/order");
 const Cart = require("../models/Cart");
 
-// Place Order
 const placeOrder = async (req, res) => {
   try {
     const { shippingAddress, paymentMethod } = req.body;
 
-    // Get user's cart
     const cartItems = await Cart.find({
       user: req.user._id,
     }).populate("product");
@@ -18,13 +16,10 @@ const placeOrder = async (req, res) => {
       });
     }
 
-    // Calculate total price
     const totalPrice = cartItems.reduce(
       (acc, item) => acc + item.product.price * item.quantity,
       0,
     );
-
-    // Create order
     const order = await Order.create({
       user: req.user._id,
       orderItems: cartItems.map((item) => ({
@@ -36,7 +31,6 @@ const placeOrder = async (req, res) => {
       totalPrice,
     });
 
-    // Empty cart
     await Cart.deleteMany({ user: req.user._id });
 
     res.status(201).json({
@@ -52,7 +46,6 @@ const placeOrder = async (req, res) => {
   }
 };
 
-// Get Logged In User Orders
 const getMyOrders = async (req, res) => {
   try {
     const orders = await Order.find({

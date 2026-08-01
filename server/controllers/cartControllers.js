@@ -1,8 +1,5 @@
 const Cart = require("../models/Cart");
 
-// =======================
-// Add Product To Cart
-// =======================
 const addToCart = async (req, res) => {
   try {
     const { product, quantity = 1 } = req.body;
@@ -45,9 +42,7 @@ const addToCart = async (req, res) => {
   }
 };
 
-// =======================
-// Get Logged In User Cart
-// =======================
+
 const getCart = async (req, res) => {
   try {
     const cart = await Cart.find({
@@ -72,9 +67,7 @@ const getCart = async (req, res) => {
   }
 };
 
-// =======================
-// Remove Item From Cart
-// =======================
+
 const removeFromCart = async (req, res) => {
   try {
     const item = await Cart.findById(req.params.id);
