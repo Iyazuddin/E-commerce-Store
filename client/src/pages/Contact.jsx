@@ -10,9 +10,6 @@ function Contact() {
     email: user?.email || "",
     subject: "",
     message: "",
-    access_key:
-      import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ||
-      "073173f6-0662-464c-a86c-7ddc9ca04c71",
   });
 
   const [status, setStatus] = useState({
@@ -26,6 +23,7 @@ function Contact() {
       ...formData,
       [e.target.name]: e.target.value,
     });
+
     if (status.error || status.success) {
       setStatus({ loading: false, success: false, error: "" });
     }
@@ -44,7 +42,7 @@ function Contact() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: formData.access_key,
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
           name: formData.name,
           email: formData.email,
           subject: formData.subject || "ElectroMart Support Request",
@@ -57,7 +55,11 @@ function Contact() {
 
       if (result.success) {
         setStatus({ loading: false, success: true, error: "" });
-        setFormData((prev) => ({ ...prev, subject: "", message: "" }));
+        setFormData((prev) => ({
+          ...prev,
+          subject: "",
+          message: "",
+        }));
       } else {
         setStatus({
           loading: false,
@@ -67,6 +69,7 @@ function Contact() {
       }
     } catch (err) {
       console.error("Web3Forms error:", err);
+
       setStatus({
         loading: false,
         success: false,
@@ -101,25 +104,6 @@ function Contact() {
         )}
 
         <form onSubmit={handleSubmit} className="contact-form">
-          <div className="form-group">
-            <input
-              type="hidden"
-              name="access_key"
-              value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY}
-            />
-            <small style={{ color: "var(--text-muted)", fontSize: "0.8rem" }}>
-              Get your free key at{" "}
-              <a
-                href="https://web3forms.com/"
-                target="_blank"
-                rel="noreferrer"
-                style={{ color: "var(--accent)" }}
-              >
-                web3forms.com
-              </a>
-            </small>
-          </div>
-
           <div className="form-row">
             <div className="form-group">
               <label>Your Name</label>
