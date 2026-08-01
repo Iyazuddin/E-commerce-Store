@@ -1,0 +1,77 @@
+.register-container {
+  min-height: calc(100vh - 210px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 34px 16px 18px;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 38px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+.register-card h2 {
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+  color: #132238;
+}
+
+.register-card input {
+  width: 100%;
+  padding: 15px 16px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(19, 34, 56, 0.12);
+  border-radius: 16px;
+  font-size: 15px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.register-card input:focus {
+  border-color: rgba(15, 118, 110, 0.45);
+  box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.1);
+}
+
+.register-card button {
+  width: 100%;
+  padding: 15px 18px;
+  background: linear-gradient(135deg, #d97706 0%, #0f172a 100%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 16px 26px rgba(217, 119, 6, 0.22);
+}
+
+.register-card button:hover {
+  box-shadow: 0 20px 32px rgba(217, 119, 6, 0.28);
+}
+
+.register-card p {
+  text-align: center;
+  margin-top: 20px;
+  color: #607086;
+}
+
+.register-card a {
+  text-decoration: none;
+  color: #d97706;
+  font-weight: 600;
+}
+
+.register-card a:hover {
+  text-decoration: underline;
+}
