@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import API from "../services/api";
+import { useAuth } from "../context/useAuth";
 import "../styles/Login.css";
 
 function Login() {
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -12,12 +13,14 @@ function Login() {
   });
 
   const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+    if (errorMsg) setErrorMsg("");
   };
 
   const handleSubmit = async (e) => {
@@ -25,20 +28,13 @@ function Login() {
 
     try {
       setLoading(true);
+      setErrorMsg("");
 
-      const { data } = await API.post("/auth/login", {
-        email: formData.email,
-        password: formData.password,
-      });
-
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("user", JSON.stringify(data.user));
-
-      alert(data.message);
-
+      const data = await login(formData.email, formData.password);
+      alert(data.message || "Login successful!");
       navigate("/");
     } catch (error) {
-      alert(error.response?.data?.message || "Login Failed");
+      setErrorMsg(error.response?.data?.message || "Login Failed. Please check your credentials.");
     } finally {
       setLoading(false);
     }
@@ -48,6 +44,8 @@ function Login() {
     <div className="login-container">
       <form className="login-card" onSubmit={handleSubmit}>
         <h2>Welcome Back</h2>
+
+        {errorMsg && <div className="error-alert" style={{ color: "#ef4444", marginBottom: "1rem", fontSize: "0.9rem" }}>{errorMsg}</div>}
 
         <input
           type="email"
@@ -67,7 +65,7 @@ function Login() {
           required
         />
 
-        <button type="submit">
+        <button type="submit" disabled={loading}>
           {loading ? "Logging in..." : "Login"}
         </button>
 

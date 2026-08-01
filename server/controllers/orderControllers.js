@@ -21,7 +21,7 @@ const placeOrder = async (req, res) => {
     // Calculate total price
     const totalPrice = cartItems.reduce(
       (acc, item) => acc + item.product.price * item.quantity,
-      0
+      0,
     );
 
     // Create order
@@ -51,7 +51,6 @@ const placeOrder = async (req, res) => {
     });
   }
 };
-
 
 // Get Logged In User Orders
 const getMyOrders = async (req, res) => {

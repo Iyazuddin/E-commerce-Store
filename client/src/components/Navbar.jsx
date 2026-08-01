@@ -1,16 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/useAuth";
 
 function Navbar() {
   const navigate = useNavigate();
+  const { user, isAuthenticated, logout } = useAuth();
 
-  const token = localStorage.getItem("token");
-
-  const logout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-
+  const handleLogout = () => {
+    logout();
     alert("Logged out successfully");
-
     navigate("/");
   };
 
@@ -34,13 +31,22 @@ function Navbar() {
           <Link to="/orders" className="nav-link">
             Orders
           </Link>
+
+          <Link to="/contact" className="nav-link">
+            Contact Us
+          </Link>
         </div>
 
         <div className="nav-auth">
-          {token ? (
-            <button onClick={logout} className="nav-button">
-              Logout
-            </button>
+          {isAuthenticated ? (
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+              <span className="user-greeting" style={{ fontSize: "0.9rem", color: "var(--text-muted, #94a3b8)" }}>
+                Hi, <strong>{user?.name || "User"}</strong>
+              </span>
+              <button onClick={handleLogout} className="nav-button">
+                Logout
+              </button>
+            </div>
           ) : (
             <>
               <Link to="/login" className="nav-link">

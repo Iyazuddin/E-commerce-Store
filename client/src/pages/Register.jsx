@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import API from "../services/api";
+import { useAuth } from "../context/useAuth";
 import "../styles/Register.css";
 
 function Register() {
   const navigate = useNavigate();
+  const { register } = useAuth();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -14,37 +15,41 @@ function Register() {
   });
 
   const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+    if (errorMsg) setErrorMsg("");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match");
+      setErrorMsg("Passwords do not match");
       return;
     }
 
     try {
       setLoading(true);
+      setErrorMsg("");
 
-      const { data } = await API.post("/auth/register", {
-        name: formData.name,
-        email: formData.email,
-        password: formData.password,
-      });
-
-      alert(data.message);
-
-      navigate("/login");
+      const res = await register(
+        formData.name,
+        formData.email,
+        formData.password,
+      );
+      alert(res.message || "Account registered successfully!");
+      navigate("/");
     } catch (error) {
       console.log(error);
-      alert(error.response?.data?.message || "Registration Failed");
+      setErrorMsg(
+        error.response?.data?.message ||
+          "Registration Failed. Please try again.",
+      );
     } finally {
       setLoading(false);
     }
@@ -54,6 +59,19 @@ function Register() {
     <div className="register-container">
       <form className="register-card" onSubmit={handleSubmit}>
         <h2>Create Account</h2>
+
+        {errorMsg && (
+          <div
+            className="error-alert"
+            style={{
+              color: "#ef4444",
+              marginBottom: "1rem",
+              fontSize: "0.9rem",
+            }}
+          >
+            {errorMsg}
+          </div>
+        )}
 
         <input
           type="text"
@@ -91,8 +109,8 @@ function Register() {
           required
         />
 
-        <button type="submit">
-          {loading ? "Creating..." : "Register"}
+        <button type="submit" disabled={loading}>
+          {loading ? "Creating Account..." : "Register"}
         </button>
 
         <p>

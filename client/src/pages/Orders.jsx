@@ -60,28 +60,23 @@ function Orders() {
             </div>
 
             <div className="products-list">
-              {order.orderItems.map((item) => (
-                <div className="product-row" key={item._id}>
-                  <img
-                    src={item.product.image}
-                    alt={item.product.name}
-                  />
+              {order.orderItems
+                ?.filter((item) => item && item.product)
+                .map((item) => (
+                  <div className="product-row" key={item._id}>
+                    <img src={item.product.image} alt={item.product.name} />
 
-                  <div className="product-info">
-                    <h4>{item.product.name}</h4>
+                    <div className="product-info">
+                      <h4>{item.product.name}</h4>
 
-                    <p>{item.product.brand}</p>
+                      <p>{item.product.brand}</p>
 
-                    <span>
-                      ₹ {item.product.price.toLocaleString()}
-                    </span>
+                      <span>₹ {item.product.price.toLocaleString()}</span>
+                    </div>
+
+                    <div className="qty">Qty : {item.quantity}</div>
                   </div>
-
-                  <div className="qty">
-                    Qty : {item.quantity}
-                  </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
         ))

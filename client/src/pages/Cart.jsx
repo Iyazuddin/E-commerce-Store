@@ -74,7 +74,9 @@ function Cart() {
   }
 };
 
-  const total = cart.reduce(
+  const validCartItems = cart.filter((item) => item && item.product);
+
+  const total = validCartItems.reduce(
     (sum, item) => sum + item.product.price * item.quantity,
     0
   );
@@ -83,14 +85,14 @@ function Cart() {
     <div className="cart-container">
       <h1 className="cart-title">🛒 My Cart</h1>
 
-      {cart.length === 0 ? (
+      {validCartItems.length === 0 ? (
         <div className="empty-cart">
           <h2>Your Cart is Empty</h2>
         </div>
       ) : (
         <div className="cart-layout">
           <div className="cart-items">
-            {cart.map((item) => (
+            {validCartItems.map((item) => (
               <div className="cart-card" key={item._id}>
                 <img
                   src={item.product.image}
@@ -123,7 +125,7 @@ function Cart() {
 
             <div className="summary-row">
               <span>Total Items</span>
-              <span>{cart.length}</span>
+              <span>{validCartItems.length}</span>
             </div>
 
             <div className="summary-row">

@@ -50,18 +50,18 @@ function Home() {
     <div className="home-page">
       <section className="hero-panel page-frame">
         <div className="hero-copy">
-          <span className="eyebrow">Curated electronics store</span>
-          <h1>Premium gadgets, presented with a cleaner shopping experience.</h1>
+          <span className="eyebrow">⚡ Next-Gen Tech Store</span>
+          <h1>Empowering Your Digital Lifestyle With Cutting-Edge Innovation.</h1>
           <p>
-            Browse standout devices, compare with confidence, and move from discovery to checkout with a more polished storefront.
+            Discover flagship smartphones, immersive audio gear, ultra-portable laptops, and smart wearables built to elevate your daily workflow and entertainment.
           </p>
 
           <div className="hero-actions">
             <a href="#products" className="hero-button primary">
-              Shop products
+              Shop Products
             </a>
             <a href="/cart" className="hero-button secondary">
-              Review cart
+              View Cart
             </a>
           </div>
 
@@ -83,10 +83,10 @@ function Home() {
 
         <div className="hero-visual glass-panel">
           <div className="hero-visual-card">
-            <span>Featured setup</span>
-            <h3>Design that feels more premium from the first glance.</h3>
+            <span>⚡ Flagship Showcase</span>
+            <h3>Uncompromising Tech Meets Seamless Shopping.</h3>
             <p>
-              Strong contrast, layered surfaces, and better spacing make the shop easier to scan.
+              Explore our handpicked collection of performance tech, backed by lightning-fast checkout and secure ordering.
             </p>
           </div>
         </div>

@@ -21,6 +21,8 @@ function Footer() {
           <Link to="/cart">Cart</Link>
 
           <Link to="/orders">Orders</Link>
+
+          <Link to="/contact">Support (Web3Forms)</Link>
         </div>
 
         <div className="footer-section">
@@ -38,7 +40,7 @@ function Footer() {
       <hr />
 
       <p className="copyright">
-        © 2026 ElectroMart. All Rights Reserved.
+        © 2026 ElectroMart. Powered by Web3Forms & React.
       </p>
     </footer>
   );
