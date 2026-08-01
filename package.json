@@ -1,15 +1,23 @@
 {
   "name": "e-commerce",
   "version": "1.0.0",
-  "description": "",
+  "description": "Full Stack MERN E-Commerce Store with JWT Authentication and MongoDB.",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server/server.js",
     "start": "node server/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "mern",
+    "react",
+    "mongodb",
+    "node",
+    "express",
+    "jwt",
+    "ecommerce"
+  ],
+  "author": "Iyazuddin",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
