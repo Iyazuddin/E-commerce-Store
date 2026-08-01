@@ -4,6 +4,14 @@ A full-stack E-Commerce web application built using the MERN Stack (MongoDB, Exp
 
 ---
 
+## 🌐 Live Demo
+
+**Application:** https://e-commerce-store-gk6j5sena-iyazuddins-projects.vercel.app/
+
+**Backend API:** https://e-commerce-store-backend-gosj.onrender.com
+
+---
+
 ## 📖 Project Overview
 
 The MERN E-Commerce Store is a full-stack web application that demonstrates the implementation of a modern online shopping platform using the MERN Stack.
