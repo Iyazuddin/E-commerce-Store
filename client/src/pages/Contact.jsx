@@ -104,12 +104,9 @@ function Contact() {
           <div className="form-group">
             <label>Web3Forms Access Key</label>
             <input
-              type="text"
+              type="hidden"
               name="access_key"
-              value={formData.access_key}
-              onChange={handleChange}
-              placeholder="e.g. YOUR_WEB3FORMS_ACCESS_KEY"
-              required
+              value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY}
             />
             <small style={{ color: "var(--text-muted)", fontSize: "0.8rem" }}>
               Get your free key at{" "}
