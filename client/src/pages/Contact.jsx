@@ -102,7 +102,6 @@ function Contact() {
 
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
-            <label>Web3Forms Access Key</label>
             <input
               type="hidden"
               name="access_key"
