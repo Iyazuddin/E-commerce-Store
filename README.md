@@ -112,7 +112,6 @@ E-commerce-Store/
 
 ```bash
 git clone https://github.com/Iyazuddin/E-commerce-Store.git
-
 cd E-commerce-Store
 ```
 
@@ -120,19 +119,17 @@ cd E-commerce-Store
 
 ### 2. Install Dependencies
 
-Install backend dependencies
+Install backend dependencies:
 
 ```bash
 cd server
-
 npm install
 ```
 
-Install frontend dependencies
+Install frontend dependencies:
 
 ```bash
 cd ../client
-
 npm install
 ```
 
@@ -140,43 +137,40 @@ npm install
 
 ### 3. Configure Environment Variables
 
-Create a `.env` file inside the **server** folder.
-
-Example:
+Create a `.env` file inside the `server` folder and add the following:
 
 ```env
 PORT=5000
-
 MONGO_URI=your_mongodb_connection_string
-
 JWT_SECRET=your_secret_key
-
 CLIENT_URL=http://localhost:5173
 ```
+
+> **Note:** Replace the placeholder values with your own configuration.
 
 ---
 
 ### 4. Run the Backend
 
 ```bash
-cd server
-
-npm start
+cd ../server
+npm run dev
 ```
 
-or
+Or for production:
 
 ```bash
-npm run dev
+npm start
 ```
 
 ---
 
 ### 5. Run the Frontend
 
+Open a new terminal:
+
 ```bash
 cd client
-
 npm run dev
 ```
 
@@ -187,8 +181,6 @@ npm run dev
 ```
 http://localhost:5173
 ```
-
----
 
 ## 🔐 Environment Variables
 
