@@ -79,6 +79,14 @@ const removeFromCart = async (req, res) => {
       });
     }
 
+    // Security: Only allow users to remove their own cart items
+    if (item.user.toString() !== req.user._id.toString()) {
+      return res.status(403).json({
+        success: false,
+        message: "Not authorized to remove this item",
+      });
+    }
+
     await item.deleteOne();
 
     res.status(200).json({

@@ -82,11 +82,16 @@ function Home() {
         </div>
 
         <div className="hero-visual glass-panel">
+          <figure className="hero-product">
+            <img src="/Smartphone1.jpg" alt="NovaCart flagship smartphone" className="hero-product-img" />
+            <figcaption className="hero-product-badge">
+              <span aria-hidden="true">⚡</span> Flagship Showcase
+            </figcaption>
+          </figure>
           <div className="hero-visual-card">
-            <span>⚡ Flagship Showcase</span>
-            <h3>Uncompromising Tech Meets Seamless Shopping.</h3>
+            <h3>Uncompromising tech, seamless shopping.</h3>
             <p>
-              Explore our handpicked collection of performance tech, backed by lightning-fast checkout and secure ordering.
+              Handpicked performance gear with lightning-fast checkout and secure ordering.
             </p>
           </div>
         </div>

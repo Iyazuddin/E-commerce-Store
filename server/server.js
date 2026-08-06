@@ -1,9 +1,10 @@
 const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, ".env") });
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const PORT = process.env.PORT || 5000;
-require("dotenv").config({ path: path.resolve(__dirname, ".env") });
 const authRoutes = require("./routes/authRoutes");
 const productRoutes = require("./routes/productRoutes");
 const cartRoutes = require("./routes/cartRoutes");
@@ -26,9 +27,25 @@ mongoose
   .catch((err) => console.log("MongoDB Error:", err.message));
 
 app.get("/", (req, res) => {
-  res.send("ELECTROMART API is running");
+  res.send("NOVACART API is running");
 });
 
+// 404 handler for undefined routes
+app.use((req, res) => {
+  res.status(404).json({
+    success: false,
+    message: "Route not found",
+  });
+});
+
+// Global error handler
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({
+    success: false,
+    message: "Internal server error",
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

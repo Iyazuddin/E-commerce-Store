@@ -7,7 +7,7 @@ function Footer() {
       <div className="footer-container">
 
         <div className="footer-section">
-          <h2>ElectroMart</h2>
+          <h2>NovaCart</h2>
           <p>
             Your one-stop destination for premium electronics and gadgets.
           </p>
@@ -28,7 +28,7 @@ function Footer() {
         <div className="footer-section">
           <h3>Contact</h3>
 
-          <p>📧 support@electromart.com</p>
+          <p>📧 support@novacart.com</p>
 
           <p>📞 +91 9876543210</p>
 
@@ -40,7 +40,7 @@ function Footer() {
       <hr />
 
       <p className="copyright">
-        © 2026 ElectroMart. Powered by Web3Forms & React.
+        © 2026 NovaCart. Powered by Web3Forms & React.
       </p>
     </footer>
   );

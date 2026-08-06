@@ -6,6 +6,26 @@ const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
+    // Input validation
+    if (!name || !email || !password) {
+      return res.status(400).json({
+        message: "Please provide all required fields: name, email, password",
+      });
+    }
+
+    if (password.length < 6) {
+      return res.status(400).json({
+        message: "Password must be at least 6 characters long",
+      });
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({
+        message: "Please provide a valid email address",
+      });
+    }
+
     const userExists = await User.findOne({ email });
 
     if (userExists) {
@@ -42,6 +62,13 @@ const registerUser = async (req, res) => {
 const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
+
+    // Input validation
+    if (!email || !password) {
+      return res.status(400).json({
+        message: "Please provide email and password",
+      });
+    }
 
     const user = await User.findOne({ email });
 

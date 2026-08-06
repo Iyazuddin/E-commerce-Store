@@ -106,3 +106,45 @@
         text-align: center;
     }
 }
+
+/* Dark mode */
+[data-theme="dark"] .orders-title {
+    color: var(--text);
+}
+
+[data-theme="dark"] .empty-orders {
+    background: rgba(15, 23, 42, 0.72);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .empty-orders h2,
+[data-theme="dark"] .empty-orders p {
+    color: var(--text);
+}
+
+[data-theme="dark"] .empty-orders p {
+    color: var(--muted);
+}
+
+[data-theme="dark"] .order-card {
+    background: rgba(15, 23, 42, 0.82);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .product-row {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .product-info h4 {
+    color: var(--text);
+}
+
+[data-theme="dark"] .product-info p {
+    color: var(--muted);
+}
+
+[data-theme="dark"] .qty {
+    color: var(--text);
+}
