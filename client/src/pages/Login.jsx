@@ -1,11 +1,16 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/useAuth";
+import { useToast } from "../context/ToastContext";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 import "../styles/Login.css";
 
 function Login() {
+  useDocumentTitle("Login");
   const navigate = useNavigate();
+  const location = useLocation();
   const { login } = useAuth();
+  const { showToast } = useToast();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -30,9 +35,11 @@ function Login() {
       setLoading(true);
       setErrorMsg("");
 
-      const data = await login(formData.email, formData.password);
-      alert(data.message || "Login successful!");
-      navigate("/");
+      await login(formData.email, formData.password);
+      showToast("Login successful!", "success");
+      // Send the user back where they were headed (e.g. from a protected route)
+      const from = location.state?.from || "/";
+      navigate(from);
     } catch (error) {
       setErrorMsg(error.response?.data?.message || "Login Failed. Please check your credentials.");
     } finally {

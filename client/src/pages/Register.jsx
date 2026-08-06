@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/useAuth";
+import { useToast } from "../context/ToastContext";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 import "../styles/Register.css";
 
 function Register() {
+  useDocumentTitle("Register");
   const navigate = useNavigate();
   const { register } = useAuth();
+  const { showToast } = useToast();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -37,12 +41,8 @@ function Register() {
       setLoading(true);
       setErrorMsg("");
 
-      const res = await register(
-        formData.name,
-        formData.email,
-        formData.password,
-      );
-      alert(res.message || "Account registered successfully!");
+      await register(formData.name, formData.email, formData.password);
+      showToast("Account created! Welcome to NovaCart 🎉", "success");
       navigate("/");
     } catch (error) {
       console.log(error);

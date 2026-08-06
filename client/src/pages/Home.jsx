@@ -1,50 +1,32 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import API from "../services/api";
-import fallbackProductImage from "../assets/hero.png";
+import ProductCard from "../components/ProductCard";
+import Skeleton from "../components/Skeleton";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 function Home() {
+  useDocumentTitle("");
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  const fetchProducts = async () => {
-    try {
-      const { data } = await API.get("/products");
-      setProducts(data.products);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const addToCart = async (productId) => {
-    try {
-      const token = localStorage.getItem("token");
-
-      if (!token) {
-        alert("Please login first");
-        return;
+    let active = true;
+    const fetchProducts = async () => {
+      try {
+        const { data } = await API.get("/products?pageSize=8");
+        if (active) setProducts(data.products);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        if (active) setLoading(false);
       }
-
-      await API.post(
-        "/cart",
-        {
-          product: productId,
-          quantity: 1,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
-      alert("Product added to cart");
-    } catch (error) {
-      console.log(error);
-      alert("Failed to add product");
-    }
-  };
+    };
+    fetchProducts();
+    return () => {
+      active = false;
+    };
+  }, []);
 
   return (
     <div className="home-page">
@@ -101,41 +83,31 @@ function Home() {
         <div className="section-title">
           <div>
             <span className="eyebrow">New arrivals</span>
-            <h2>Our Products</h2>
+            <h2>Featured Products</h2>
           </div>
-          <p>Clean product cards with stronger hierarchy and clearer calls to action.</p>
+          <Link to="/shop" className="view-all-link">
+            View all products →
+          </Link>
         </div>
 
-        <div className="product-grid">
-          {products.map((product) => (
-            <article className="product-card glass-panel" key={product._id}>
-              <div className="product-image-wrap">
-                <img
-                  src={product.image || fallbackProductImage}
-                  alt={product.name}
-                  className="product-image"
-                  loading="lazy"
-                  onError={(event) => {
-                    event.currentTarget.src = fallbackProductImage;
-                  }}
-                />
+        {loading ? (
+          <div className="product-grid">
+            {Array.from({ length: 8 }).map((_, index) => (
+              <div className="product-card skeleton-card" key={index}>
+                <Skeleton className="skeleton-img" />
+                <Skeleton className="skeleton-line short" />
+                <Skeleton className="skeleton-line" />
+                <Skeleton className="skeleton-line long" />
               </div>
-
-              <div className="product-body">
-                <div className="product-meta">
-                  <span className="product-brand">{product.brand}</span>
-                  <span className="product-price">₹ {product.price.toLocaleString()}</span>
-                </div>
-
-                <h3>{product.name}</h3>
-
-                <button className="product-action" onClick={() => addToCart(product._id)}>
-                  Add to Cart
-                </button>
-              </div>
-            </article>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <div className="product-grid">
+            {products.map((product) => (
+              <ProductCard key={product._id} product={product} />
+            ))}
+          </div>
+        )}
       </section>
     </div>
   );

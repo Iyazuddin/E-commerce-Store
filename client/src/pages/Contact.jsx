@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useAuth } from "../context/useAuth";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 import "../styles/Contact.css";
 
 function Contact() {
+  useDocumentTitle("Contact Us");
   const { user } = useAuth();
 
   const [formData, setFormData] = useState({

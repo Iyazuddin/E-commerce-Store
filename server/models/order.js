@@ -15,6 +15,20 @@ const orderSchema = new mongoose.Schema(
           ref: "Product",
           required: true,
         },
+        // Price snapshot so order history stays correct even if the
+        // product price changes later (industry-standard practice).
+        name: {
+          type: String,
+          required: true,
+        },
+        price: {
+          type: Number,
+          required: true,
+        },
+        image: {
+          type: String,
+          required: true,
+        },
         quantity: {
           type: Number,
           required: true,
@@ -24,11 +38,19 @@ const orderSchema = new mongoose.Schema(
     ],
 
     shippingAddress: {
+      fullName: {
+        type: String,
+        required: true,
+      },
       address: {
         type: String,
         required: true,
       },
       city: {
+        type: String,
+        required: true,
+      },
+      state: {
         type: String,
         required: true,
       },
@@ -40,11 +62,22 @@ const orderSchema = new mongoose.Schema(
         type: String,
         required: true,
       },
+      phone: {
+        type: String,
+        required: true,
+      },
     },
 
-    paymentMethod: {
-      type: String,
-      default: "Cash on Delivery",
+    itemsPrice: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+
+    shippingPrice: {
+      type: Number,
+      required: true,
+      default: 0,
     },
 
     totalPrice: {
@@ -52,8 +85,14 @@ const orderSchema = new mongoose.Schema(
       required: true,
     },
 
+    paymentMethod: {
+      type: String,
+      default: "Cash on Delivery",
+    },
+
     orderStatus: {
       type: String,
+      enum: ["Pending", "Confirmed", "Shipped", "Delivered", "Cancelled"],
       default: "Pending",
     },
 
