@@ -6,4 +6,8 @@ dist/
 dist-ssr/
 *.log
 .vscode/
+.idea/
 .DS_Store
+Thumbs.db
+*.suo
+.claude/
