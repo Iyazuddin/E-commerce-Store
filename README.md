@@ -6,7 +6,7 @@ A full-stack E-Commerce web application built using the MERN Stack (MongoDB, Exp
 
 ## 🌐 Live Demo
 
-**Application:** https://e-commerce-store-gk6j5sena-iyazuddins-projects.vercel.app/
+**Application:** https://e-commerce-store-iyazuddins-projects.vercel.app/
 
 **Backend API:** https://e-commerce-store-backend-gosj.onrender.com
 
