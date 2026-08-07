@@ -24,10 +24,8 @@ const products = [
     price: 124900,
     countInStock: 25,
     image:
-      "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&q=80",
-    ],
+      "/products/apple-iphone-15-pro-max.jpg",
+    images: ["/products/apple-iphone-15-pro-max.jpg"],
     featured: true,
     specs: [
       { label: "Display", value: '6.7" Super Retina XDR, 120Hz ProMotion' },
@@ -72,10 +70,8 @@ const products = [
     price: 94999,
     countInStock: 30,
     image:
-      "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500&q=80",
-    ],
+      "/products/samsung-galaxy-s24-ultra.jpg",
+    images: ["/products/samsung-galaxy-s24-ultra.jpg"],
     featured: false,
     specs: [
       { label: "Display", value: '6.8" Dynamic AMOLED 2X, 120Hz' },
@@ -109,10 +105,8 @@ const products = [
     price: 24990,
     countInStock: 50,
     image:
-      "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=500&q=80",
-    ],
+      "/products/sony-wh1000xm5.jpg",
+    images: ["/products/sony-wh1000xm5.jpg"],
     featured: true,
     specs: [
       { label: "Type", value: "Over-ear, wireless" },
@@ -152,10 +146,8 @@ const products = [
     price: 22900,
     countInStock: 60,
     image:
-      "https://images.unsplash.com/photo-1603351154351-5e2d0600bb77?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1603351154351-5e2d0600bb77?w=500&q=80",
-    ],
+      "/products/apple-airpods-pro-2.jpg",
+    images: ["/products/apple-airpods-pro-2.jpg"],
     featured: false,
     specs: [
       { label: "Type", value: "In-ear TWS" },
@@ -192,8 +184,8 @@ const products = [
     category: "Earbuds",
     price: 19999,
     countInStock: 40,
-    image: "/buds1.jpg",
-    images: ["/buds1.jpg", "/buds2.jpg"],
+    image: "/products/samsung-galaxy-buds3-pro.jpg",
+    images: ["/products/samsung-galaxy-buds3-pro.jpg"],
     featured: false,
     specs: [
       { label: "Type", value: "In-ear TWS" },
@@ -221,10 +213,8 @@ const products = [
     price: 119990,
     countInStock: 15,
     image:
-      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=80",
-    ],
+      "/products/macbook-air-m3.jpg",
+    images: ["/products/macbook-air-m3.jpg"],
     featured: true,
     specs: [
       { label: "Display", value: '15.3" Liquid Retina' },
@@ -265,10 +255,8 @@ const products = [
     price: 139990,
     countInStock: 10,
     image:
-      "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=500&q=80",
-    ],
+      "/products/dell-xps-15.jpg",
+    images: ["/products/dell-xps-15.jpg"],
     featured: false,
     specs: [
       { label: "Display", value: '15.6" 3.5K OLED touch' },
@@ -296,10 +284,8 @@ const products = [
     price: 114900,
     countInStock: 20,
     image:
-      "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&q=80",
-    ],
+      "/products/ipad-pro-m4.jpg",
+    images: ["/products/ipad-pro-m4.jpg"],
     featured: false,
     specs: [
       { label: "Display", value: '13" Ultra Retina XDR, 120Hz' },
@@ -369,8 +355,8 @@ const products = [
     category: "Smartwatches",
     price: 39900,
     countInStock: 30,
-    image: "/smartwatch.jpg",
-    images: ["/smartwatch.jpg", "/watch2.jpg"],
+    image: "/products/apple-watch-series-9.jpg",
+    images: ["/products/apple-watch-series-9.jpg"],
     featured: true,
     specs: [
       { label: "Display", value: "Always-On Retina LTPO" },
@@ -404,10 +390,8 @@ const products = [
     price: 1299,
     countInStock: 100,
     image:
-      "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=500&q=80",
-    ],
+      "/products/boat-airdopes-141.png",
+    images: ["/products/boat-airdopes-141.png"],
     featured: false,
     specs: [
       { label: "Type", value: "In-ear TWS" },
@@ -442,10 +426,8 @@ const products = [
     price: 64999,
     countInStock: 25,
     image:
-      "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&q=80",
-    ],
+      "/products/oneplus-12.jpg",
+    images: ["/products/oneplus-12.jpg"],
     featured: false,
     specs: [
       { label: "Display", value: '6.82" 2K LTPO, 120Hz' },
@@ -479,10 +461,8 @@ const products = [
     price: 29999,
     countInStock: 22,
     image:
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80",
-    ],
+      "/products/samsung-galaxy-watch-6.jpg",
+    images: ["/products/samsung-galaxy-watch-6.jpg"],
     featured: false,
     specs: [
       { label: "Display", value: '1.5" Super AMOLED' },
@@ -510,10 +490,8 @@ const products = [
     price: 44999,
     countInStock: 18,
     image:
-      "https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=500&q=80",
-    ],
+      "/products/nothing-phone-2.jpg",
+    images: ["/products/nothing-phone-2.jpg"],
     featured: false,
     specs: [
       { label: "Display", value: '6.7" LTPO OLED, 120Hz' },
@@ -608,10 +586,8 @@ const products = [
     price: 79999,
     countInStock: 20,
     image:
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&q=80",
-    ],
+      "/products/google-pixel-8-pro.jpg",
+    images: ["/products/google-pixel-8-pro.jpg"],
     featured: false,
     specs: [
       { label: "Display", value: '6.7" Super Actua OLED, 120Hz' },
@@ -648,10 +624,8 @@ const products = [
     price: 69999,
     countInStock: 24,
     image:
-      "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=500&q=80",
-    ],
+      "/products/xiaomi-14-ultra.jpg",
+    images: ["/products/xiaomi-14-ultra.jpg"],
     featured: false,
     specs: [
       { label: "Display", value: '6.73" 2K AMOLED, 120Hz' },
@@ -684,10 +658,8 @@ const products = [
     price: 179900,
     countInStock: 12,
     image:
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=500&q=80",
-    ],
+      "/products/macbook-pro-14-m3.jpg",
+    images: ["/products/macbook-pro-14-m3.jpg"],
     featured: true,
     specs: [
       { label: "Display", value: '14.2" Liquid Retina XDR, 120Hz' },
@@ -721,10 +693,8 @@ const products = [
     price: 129990,
     countInStock: 16,
     image:
-      "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=500&q=80",
-    ],
+      "/products/hp-spectre-x360-14.jpg",
+    images: ["/products/hp-spectre-x360-14.jpg"],
     featured: false,
     specs: [
       { label: "Display", value: '14" 2.8K OLED touch' },
@@ -752,10 +722,8 @@ const products = [
     price: 119990,
     countInStock: 14,
     image:
-      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&q=80",
-    ],
+      "/products/asus-rog-zephyrus-g14.png",
+    images: ["/products/asus-rog-zephyrus-g14.png"],
     featured: false,
     specs: [
       { label: "Display", value: '14" 3K OLED, 120Hz' },
@@ -789,10 +757,8 @@ const products = [
     price: 29999,
     countInStock: 28,
     image:
-      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=500&q=80",
-    ],
+      "/products/google-pixel-watch-2.jpg",
+    images: ["/products/google-pixel-watch-2.jpg"],
     featured: false,
     specs: [
       { label: "Display", value: "41mm AMOLED" },
@@ -820,10 +786,8 @@ const products = [
     price: 47990,
     countInStock: 20,
     image:
-      "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=500&q=80",
-    ],
+      "/products/garmin-forerunner-265.jpg",
+    images: ["/products/garmin-forerunner-265.jpg"],
     featured: false,
     specs: [
       { label: "Display", value: '1.3" AMOLED touchscreen' },
@@ -894,10 +858,8 @@ const products = [
     price: 189999,
     countInStock: 8,
     image:
-      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&q=80",
-    ],
+      "/products/canon-eos-r6-2.jpg",
+    images: ["/products/canon-eos-r6-2.jpg"],
     featured: false,
     specs: [
       { label: "Sensor", value: "24.2MP full-frame CMOS" },
@@ -925,10 +887,8 @@ const products = [
     price: 219999,
     countInStock: 6,
     image:
-      "https://images.unsplash.com/photo-1500634245200-e5245c7574ef?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1500634245200-e5245c7574ef?w=500&q=80",
-    ],
+      "/products/sony-alpha-a7-4.jpg",
+    images: ["/products/sony-alpha-a7-4.jpg"],
     featured: false,
     specs: [
       { label: "Sensor", value: "33MP full-frame Exmor R CMOS" },
@@ -963,10 +923,8 @@ const products = [
     price: 54990,
     countInStock: 40,
     image:
-      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=500&q=80",
-    ],
+      "/products/playstation-5.png",
+    images: ["/products/playstation-5.png"],
     featured: true,
     specs: [
       { label: "Performance", value: "4K 120fps, Ray tracing" },
@@ -1000,10 +958,8 @@ const products = [
     price: 26990,
     countInStock: 50,
     image:
-      "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?w=500&q=80",
-    ],
+      "/products/nintendo-switch-oled.png",
+    images: ["/products/nintendo-switch-oled.png"],
     featured: false,
     specs: [
       { label: "Display", value: '7" OLED, 720p handheld' },
@@ -1031,10 +987,8 @@ const products = [
     price: 39999,
     countInStock: 45,
     image:
-      "https://images.unsplash.com/photo-1598965402089-897ce52e8355?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1598965402089-897ce52e8355?w=500&q=80",
-    ],
+      "/products/google-pixel-8a.jpg",
+    images: ["/products/google-pixel-8a.jpg"],
     featured: false,
     specs: [
       { label: "Display", value: '6.1" Actua OLED, 120Hz' },
@@ -1069,10 +1023,8 @@ const products = [
     price: 74999,
     countInStock: 15,
     image:
-      "https://images.unsplash.com/photo-1565849904461-56822589df05?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1565849904461-56822589df05?w=500&q=80",
-    ],
+      "/products/samsung-galaxy-z-flip-5.jpg",
+    images: ["/products/samsung-galaxy-z-flip-5.jpg"],
     featured: true,
     specs: [
       { label: "Display", value: '6.7" Dynamic AMOLED 2X, 120Hz' },
@@ -1106,10 +1058,8 @@ const products = [
     price: 52999,
     countInStock: 30,
     image:
-      "https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=500&q=80",
-    ],
+      "/products/iqoo-12-5g.jpg",
+    images: ["/products/iqoo-12-5g.jpg"],
     featured: false,
     specs: [
       { label: "Display", value: '6.78" 2K LTPO AMOLED, 144Hz' },
@@ -1184,10 +1134,8 @@ const products = [
     price: 9999,
     countInStock: 60,
     image:
-      "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=500&q=80",
-    ],
+      "/products/nothing-ear-2.png",
+    images: ["/products/nothing-ear-2.png"],
     featured: false,
     specs: [
       { label: "Type", value: "In-ear TWS" },
@@ -1221,10 +1169,8 @@ const products = [
     price: 64999,
     countInStock: 22,
     image:
-      "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=500&q=80",
-    ],
+      "/products/samsung-galaxy-tab-s9.jpg",
+    images: ["/products/samsung-galaxy-tab-s9.jpg"],
     featured: false,
     specs: [
       { label: "Display", value: '11" Dynamic AMOLED 2X, 120Hz' },
@@ -1297,10 +1243,8 @@ const products = [
     price: 16999,
     countInStock: 25,
     image:
-      "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=500&q=80",
-    ],
+      "/products/marshall-emberton-ii.jpg",
+    images: ["/products/marshall-emberton-ii.jpg"],
     featured: false,
     specs: [
       { label: "Type", value: "Portable Bluetooth" },
@@ -1373,10 +1317,8 @@ const products = [
     price: 44990,
     countInStock: 20,
     image:
-      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&q=80",
-    ],
+      "/products/gopro-hero-12-black.jpg",
+    images: ["/products/gopro-hero-12-black.jpg"],
     featured: false,
     specs: [
       { label: "Video", value: "5.3K60, 4K120" },
@@ -1411,10 +1353,8 @@ const products = [
     price: 56990,
     countInStock: 35,
     image:
-      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d?w=500&q=80",
-    ],
+      "/products/xbox-series-x.png",
+    images: ["/products/xbox-series-x.png"],
     featured: false,
     specs: [
       { label: "Performance", value: "4K 120fps, 8K ready" },
@@ -1448,10 +1388,8 @@ const products = [
     price: 8995,
     countInStock: 40,
     image:
-      "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500&q=80",
-    ],
+      "/products/logitech-mx-master-3s.png",
+    images: ["/products/logitech-mx-master-3s.png"],
     featured: false,
     specs: [
       { label: "Sensor", value: "8K DPI, tracks on glass" },
