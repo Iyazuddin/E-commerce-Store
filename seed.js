@@ -21,7 +21,7 @@ const products = [
       "6.7-inch Super Retina XDR display, A17 Pro chip, 48MP camera system, Titanium design. The ultimate iPhone for creators and power users.",
     brand: "Apple",
     category: "Smartphones",
-    price: 159900,
+    price: 124900,
     countInStock: 25,
     image:
       "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&q=80",
@@ -69,7 +69,7 @@ const products = [
       "6.8-inch Dynamic AMOLED, Snapdragon 8 Gen 3, 200MP camera, S Pen included. AI-powered productivity and pro-grade photography.",
     brand: "Samsung",
     category: "Smartphones",
-    price: 134999,
+    price: 94999,
     countInStock: 30,
     image:
       "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500&q=80",
@@ -106,7 +106,7 @@ const products = [
       "Industry-leading noise cancellation, 30-hour battery life, crystal clear hands-free calling. The benchmark for premium over-ear audio.",
     brand: "Sony",
     category: "Headphones",
-    price: 29990,
+    price: 24990,
     countInStock: 50,
     image:
       "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=500&q=80",
@@ -149,7 +149,7 @@ const products = [
       "Active Noise Cancellation, Adaptive Transparency, USB-C charging, up to 6 hours listening time. Seamless with the Apple ecosystem.",
     brand: "Apple",
     category: "Earbuds",
-    price: 24900,
+    price: 22900,
     countInStock: 60,
     image:
       "https://images.unsplash.com/photo-1603351154351-5e2d0600bb77?w=500&q=80",
@@ -190,7 +190,7 @@ const products = [
       "Intelligent ANC, 360 Audio, Hi-Fi 24-bit audio, IP57 water resistance. Flagship sound tuned for the Galaxy ecosystem.",
     brand: "Samsung",
     category: "Earbuds",
-    price: 17999,
+    price: 19999,
     countInStock: 40,
     image: "/buds1.jpg",
     images: ["/buds1.jpg", "/buds2.jpg"],
@@ -218,7 +218,7 @@ const products = [
       "15.3-inch Liquid Retina display, M3 chip, 18-hour battery, 8GB RAM, 256GB SSD. Ultra-portable performance in a thin, fanless design.",
     brand: "Apple",
     category: "Laptops",
-    price: 134900,
+    price: 119990,
     countInStock: 15,
     image:
       "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=80",
@@ -262,7 +262,7 @@ const products = [
       "15.6-inch OLED 3.5K display, Intel Core i7, 16GB RAM, 512GB SSD, NVIDIA GeForce RTX. Creator-grade power with a cinema-quality screen.",
     brand: "Dell",
     category: "Laptops",
-    price: 149990,
+    price: 139990,
     countInStock: 10,
     image:
       "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=500&q=80",
@@ -293,7 +293,7 @@ const products = [
       "13-inch Ultra Retina XDR, M4 chip, Thunderbolt, Face ID, Wi-Fi 6E. Desktop-class power that fits in your backpack.",
     brand: "Apple",
     category: "Tablets",
-    price: 119900,
+    price: 114900,
     countInStock: 20,
     image:
       "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&q=80",
@@ -330,7 +330,7 @@ const products = [
       "Portable Bluetooth speaker, IP67 waterproof, 20-hour playtime, PartyBoost. Deep bass for poolside, camping and backyard parties.",
     brand: "JBL",
     category: "Speakers",
-    price: 14999,
+    price: 12999,
     countInStock: 35,
     image:
       "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&q=80",
@@ -367,7 +367,7 @@ const products = [
       "45mm, Always-On Retina LTPO display, S9 SiP, blood oxygen, ECG app. Your health and fitness companion on your wrist.",
     brand: "Apple",
     category: "Smartwatches",
-    price: 44900,
+    price: 39900,
     countInStock: 30,
     image: "/smartwatch.jpg",
     images: ["/smartwatch.jpg", "/watch2.jpg"],
@@ -538,7 +538,7 @@ const products = [
       "Feather-light earbuds with adaptive noise cancellation, crystal-clear calls and spatial sound. Wear them all day without noticing.",
     brand: "Sony",
     category: "Earbuds",
-    price: 19990,
+    price: 14990,
     countInStock: 45,
     image:
       "https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?w=500&q=80",
@@ -605,7 +605,7 @@ const products = [
       "6.7-inch Super Actua OLED, Google Tensor G3, 50MP pro camera with Magic Editor, 7 years of updates. Pure Android intelligence with a pro-grade camera.",
     brand: "Google",
     category: "Smartphones",
-    price: 94999,
+    price: 79999,
     countInStock: 20,
     image:
       "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&q=80",
@@ -718,7 +718,7 @@ const products = [
       "14-inch 2.8K OLED touch, Intel Core Ultra 7, 16GB RAM, 1TB SSD, Windows 11. A 2-in-1 convertible with AI-enhanced performance and a stunning OLED panel.",
     brand: "HP",
     category: "Laptops",
-    price: 129999,
+    price: 129990,
     countInStock: 16,
     image:
       "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=500&q=80",
@@ -786,7 +786,7 @@ const products = [
       "41mm AMOLED display, Fitbit health tracking, Wear OS 4, safety features. Google's smartwatch, powered by Fitbit insights.",
     brand: "Google",
     category: "Smartwatches",
-    price: 33999,
+    price: 29999,
     countInStock: 28,
     image:
       "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=500&q=80",
@@ -817,7 +817,7 @@ const products = [
       "1.3-inch AMOLED touchscreen, GPS, HR sensor, training readiness, 13-day battery. Serious running watch with daily suggested workouts.",
     brand: "Garmin",
     category: "Smartwatches",
-    price: 46999,
+    price: 47990,
     countInStock: 20,
     image:
       "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=500&q=80",
@@ -854,7 +854,7 @@ const products = [
       "World-class noise cancellation, Spatial Audio, 24-hour battery, immersive wireless sound. The best-sounding QuietComfort ever made.",
     brand: "Bose",
     category: "Headphones",
-    price: 37990,
+    price: 39990,
     countInStock: 32,
     image:
       "https://images.unsplash.com/photo-1553603227-2358aabe821e?w=500&q=80",
@@ -997,7 +997,7 @@ const products = [
       "7-inch OLED screen, docked 1080p, handheld gaming anywhere, Joy-Con controllers. The definitive way to play Mario, Zelda and more.",
     brand: "Nintendo",
     category: "Gaming",
-    price: 26999,
+    price: 26990,
     countInStock: 50,
     image:
       "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?w=500&q=80",
@@ -1028,7 +1028,7 @@ const products = [
       "6.1-inch Actua OLED, Google Tensor G3, 64MP dual camera, 7 years of updates. Flagship smarts at a mid-range price, in a compact body.",
     brand: "Google",
     category: "Smartphones",
-    price: 41999,
+    price: 39999,
     countInStock: 45,
     image:
       "https://images.unsplash.com/photo-1598965402089-897ce52e8355?w=500&q=80",
@@ -1066,7 +1066,7 @@ const products = [
       "6.7-inch Dynamic AMOLED foldable, Snapdragon 8 Gen 2, 3.4-inch Flex Window cover screen, Flex Mode camera. Pocketable style that folds flat.",
     brand: "Samsung",
     category: "Smartphones",
-    price: 99999,
+    price: 74999,
     countInStock: 15,
     image:
       "https://images.unsplash.com/photo-1565849904461-56822589df05?w=500&q=80",
@@ -1332,7 +1332,7 @@ const products = [
       "Advanced health smartwatch with cEDA stress tracking, ECG, EDA scan, skin temperature, GPS, 6+ day battery. Wellness insights beyond the wrist.",
     brand: "Fitbit",
     category: "Smartwatches",
-    price: 21999,
+    price: 19999,
     countInStock: 26,
     image:
       "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&q=80",
@@ -1408,7 +1408,7 @@ const products = [
       "12 TFLOPS of GPU power, 4K 120fps gaming, ultra-fast SSD, Smart Delivery, Quick Resume. The most powerful Xbox ever, backward compatible.",
     brand: "Microsoft",
     category: "Gaming",
-    price: 55990,
+    price: 56990,
     countInStock: 35,
     image:
       "https://images.unsplash.com/photo-1621259182978-fbf93132d53d?w=500&q=80",
