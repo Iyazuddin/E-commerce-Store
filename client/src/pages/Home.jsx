@@ -14,7 +14,7 @@ function Home() {
     let active = true;
     const fetchProducts = async () => {
       try {
-        const { data } = await API.get("/products?pageSize=8");
+        const { data } = await API.get("/products?pageSize=10");
         if (active) setProducts(data.products);
       } catch (error) {
         console.log(error);
@@ -92,7 +92,7 @@ function Home() {
 
         {loading ? (
           <div className="product-grid">
-            {Array.from({ length: 8 }).map((_, index) => (
+            {Array.from({ length: 10 }).map((_, index) => (
               <div className="product-card skeleton-card" key={index}>
                 <Skeleton className="skeleton-img" />
                 <Skeleton className="skeleton-line short" />
