@@ -8,7 +8,13 @@ export const ToastProvider = ({ children }) => {
   const [toasts, setToasts] = useState([]);
 
   const dismiss = useCallback((id) => {
-    setToasts((prev) => prev.filter((toast) => toast.id !== id));
+    // Mark leaving so the CSS transition plays out, then remove from state.
+    setToasts((prev) =>
+      prev.map((toast) => (toast.id === id ? { ...toast, leaving: true } : toast)),
+    );
+    setTimeout(() => {
+      setToasts((prev) => prev.filter((toast) => toast.id !== id));
+    }, 180);
   }, []);
 
   const showToast = useCallback(
@@ -28,6 +34,7 @@ export const ToastProvider = ({ children }) => {
           <div
             key={toast.id}
             className={`toast toast-${toast.type}`}
+            data-leaving={toast.leaving || undefined}
             onClick={() => dismiss(toast.id)}
           >
             <span className="toast-icon" aria-hidden="true">

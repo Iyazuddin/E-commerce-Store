@@ -286,7 +286,8 @@
   font-size: 1rem;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: transform var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out);
   margin-top: 0.5rem;
   display: flex;
   align-items: center;

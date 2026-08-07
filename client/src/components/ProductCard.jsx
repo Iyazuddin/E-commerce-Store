@@ -6,7 +6,7 @@ import { useCart } from "../context/CartContext";
 import { useWishlist } from "../context/WishlistContext";
 import { useToast } from "../context/ToastContext";
 
-function ProductCard({ product }) {
+function ProductCard({ product, index = 0 }) {
   const { isAuthenticated } = useAuth();
   const { addToCart } = useCart();
   const { isInWishlist, toggleWishlist } = useWishlist();
@@ -35,7 +35,7 @@ function ProductCard({ product }) {
   const wished = isInWishlist(product._id);
 
   return (
-    <article className="product-card glass-panel">
+    <article className="product-card glass-panel" style={{ "--i": index }}>
       <div className="product-image-wrap">
         <Link to={`/product/${product._id}`} aria-label={product.name}>
           <img
