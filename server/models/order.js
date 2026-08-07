@@ -15,8 +15,6 @@ const orderSchema = new mongoose.Schema(
           ref: "Product",
           required: true,
         },
-        // Price snapshot so order history stays correct even if the
-        // product price changes later (industry-standard practice).
         name: {
           type: String,
           required: true,
@@ -107,5 +105,8 @@ const orderSchema = new mongoose.Schema(
     timestamps: true,
   },
 );
+
+orderSchema.index({ user: 1 });
+orderSchema.index({ createdAt: 1 });
 
 module.exports = mongoose.model("Order", orderSchema);

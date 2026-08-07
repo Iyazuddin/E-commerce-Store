@@ -32,7 +32,6 @@ app.get("/", (req, res) => {
   res.send("NOVACART API is running");
 });
 
-// 404 handler for undefined routes
 app.use((req, res) => {
   res.status(404).json({
     success: false,
@@ -40,7 +39,6 @@ app.use((req, res) => {
   });
 });
 
-// Global error handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({

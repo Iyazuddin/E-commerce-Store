@@ -86,7 +86,6 @@ const productSchema = new mongoose.Schema(
   { timestamps: true },
 );
 
-// Build a search index on name, brand and category for fast keyword lookup
 productSchema.index({ name: "text", brand: "text", category: "text" });
 
 module.exports = mongoose.model("Product", productSchema);

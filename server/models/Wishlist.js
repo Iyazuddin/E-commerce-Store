@@ -16,7 +16,6 @@ const wishlistSchema = new mongoose.Schema(
   { timestamps: true },
 );
 
-// A user can only save a product once
 wishlistSchema.index({ user: 1, product: 1 }, { unique: true });
 
 module.exports = mongoose.model("Wishlist", wishlistSchema);

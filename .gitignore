@@ -1,5 +1,6 @@
 node_modules/
 .env
+.env.example
 .env.*
 .env.local
 dist/
@@ -10,4 +11,3 @@ dist-ssr/
 .DS_Store
 Thumbs.db
 *.suo
-.claude/
