@@ -53,8 +53,35 @@ const PRICES = {
   "Logitech MX Master 3S": 8995,
 };
 
-// image: productName -> new image path(s). Fill in after images are downloaded.
-const IMAGES = {};
+// image: productName -> new image file name(s). Fill in after images are downloaded.
+const IMAGES = {
+  "Apple iPhone 15 Pro Max": "apple-iphone-15-pro-max.jpg",
+  "Samsung Galaxy S24 Ultra": "samsung-galaxy-s24-ultra.jpg",
+  "Sony WH-1000XM5 Headphones": "sony-wh1000xm5.jpg",
+  "Apple AirPods Pro 2": "apple-airpods-pro-2.jpg",
+  "MacBook Air M3": "macbook-air-m3.jpg",
+  "Apple iPad Pro M4": "ipad-pro-m4.jpg",
+  "boAt Airdopes 141": "boat-airdopes-141.png",
+  "OnePlus 12": "oneplus-12.jpg",
+  "Samsung Galaxy Watch 6": "samsung-galaxy-watch-6.jpg",
+  "Nothing Phone 2": "nothing-phone-2.jpg",
+  "Google Pixel 8 Pro": "google-pixel-8-pro.jpg",
+  "Xiaomi 14 Ultra": "xiaomi-14-ultra.jpg",
+  "Apple MacBook Pro 14 M3": "macbook-pro-14-m3.jpg",
+  "Google Pixel Watch 2": "google-pixel-watch-2.jpg",
+  "Garmin Forerunner 265": "garmin-forerunner-265.jpg",
+  "Canon EOS R6 Mark II": "canon-eos-r6-2.jpg",
+  "Sony Alpha A7 IV": "sony-alpha-a7-4.jpg",
+  "Sony PlayStation 5": "playstation-5.png",
+  "Nintendo Switch OLED": "nintendo-switch-oled.png",
+  "Google Pixel 8a": "google-pixel-8a.jpg",
+  "Samsung Galaxy Z Flip 5": "samsung-galaxy-z-flip-5.jpg",
+  "iQOO 12 5G": "iqoo-12-5g.jpg",
+  "Nothing Ear (2)": "nothing-ear-2.png",
+  "GoPro Hero 12 Black": "gopro-hero-12-black.jpg",
+  "Xbox Series X": "xbox-series-x.png",
+  "Logitech MX Master 3S": "logitech-mx-master-3s.png",
+};
 
 function escapeRegExp(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -98,11 +125,9 @@ console.log(`Prices updated: ${ok}/${Object.keys(PRICES).length}`);
 ok = 0;
 for (const [name, imgs] of Object.entries(IMAGES)) {
   const arr = Array.isArray(imgs) ? imgs : [imgs];
-  const imageField = `"/products/${arr[0]}"`;
-  const imagesField =
-    arr.length === 1
-      ? `["${arr[0].replace(/"/g, '\\"')}"]`
-      : `[${arr.map((i) => `"${i}"`).join(", ")}]`;
+  const paths = arr.map((i) => `/products/${i}`);
+  const imageField = `"${paths[0]}"`;
+  const imagesField = `[${paths.map((p) => JSON.stringify(p)).join(", ")}]`;
   if (
     updateProduct(name, (block) =>
       block
